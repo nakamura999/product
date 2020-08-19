@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Range;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,6 +25,13 @@ public class Product {
 	@NotBlank
 	@Size(max = 40)
 	private String name;
+	
+	@Range(max = 500000)
+	private Long price;
+	
+	public String setPriceEn() {
+		return price + "円";
+	}
 
 	@ManyToOne
 	private Genre genre;
