@@ -14,19 +14,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-// データの入れ物 Entity
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	// DBのidentity列を使用して、キーを自動採番。
 	private Long id;
-	
+	// DBのidentity列を使用して、キーを自動採番。
+
 	@NotBlank
 	@Size(max = 40)
 	private String name;
-	
-	@ManyToOne
-	// 多対１
-	private Genre genre;
 
+	@ManyToOne
+	private Genre genre;
+	// 多対１
 }

@@ -20,12 +20,12 @@ public class Genre {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@NotBlank
 	@Size(max = 40)
 	private String name;
-	
+
 	@OneToMany(mappedBy = "genre")
-	// １対多 mappedByで対象フィールドを指定
 	private List<Product> products;
+	// １対多 mappedByで対象フィールドを指定
 }

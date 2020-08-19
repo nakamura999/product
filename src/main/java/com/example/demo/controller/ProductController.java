@@ -18,18 +18,18 @@ import lombok.RequiredArgsConstructor;
 @Controller
 public class ProductController {
 	private final ProductRepository repository;
-	
+
 	@GetMapping("/")
 	public String showList(Model model) {
 		model.addAttribute("products", repository.findAll());
 		return "index";
 	}
-	
+
 	@GetMapping("/add")
 	public String addProduct(@ModelAttribute Product product) {
 		return "form";
 	}
-	
+
 	@PostMapping("/process")
 	public String process(@Validated @ModelAttribute Product product, BindingResult result) {
 		if (result.hasErrors()) {
@@ -38,13 +38,13 @@ public class ProductController {
 		repository.save(product);
 		return "redirect:/";
 	}
-	
+
 	@GetMapping("/edit/{id}")
 	public String editProduct(@PathVariable Long id, Model model) {
 		model.addAttribute("product", repository.findById(id));
 		return "form";
 	}
-	
+
 	@GetMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable Long id) {
 		repository.deleteById(id);

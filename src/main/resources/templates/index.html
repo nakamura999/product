@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
-	<th:block th:insert="fragments/base :: header"></th:block>
+<meta charset="UTF-8">
+<th:block th:insert="fragments/base :: header"></th:block>
 </head>
 <body id="page-top">
 	<div id="wrapper">
 		<th:block th:insert="fragments/sidebar :: sidebar"></th:block>
-		
+
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
 				<div class="container-fluid">
@@ -41,7 +41,7 @@
 													</span>
 													<span class="text">編集</span>
 												</a>
-												
+
 												<a th:href="@{/delete/{id}(id=*{id})}" class="btn btn-danger btn-icon-split">
 													<span class="icon text-white-50">
 														<i class="fas fa-trash"></i>
