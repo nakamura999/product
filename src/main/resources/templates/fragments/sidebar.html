@@ -5,15 +5,15 @@
 </head>
 <body>
 	<th:block th:fragment="sidebar">
-		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+		<ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/}">
-				<div class="sidebar-brand-icon rotate-n-15">
-					<i class="fas fa-id-card"></i>
+				<div class="sidebar-brand-icon rotate-n-20">
+					<i class="fab fa-cloudversify"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">商品情報</div>
+				<div class="sidebar-brand-text mx-2">商品情報</div>
 			</a>
 
-			<hr class="sidebar-divider my-0">
+			<hr class="sidebar-divider my-1">
 
 			<li class="nav-item active">
 				<a class="nav-link" th:href="@{/}">
@@ -23,7 +23,7 @@
 			</li>
 			<li class="nav-item active">
 				<a class="nav-link" th:href="@{/add}">
-					<i class="fas fa-user-plus"></i>
+					<i class="fas fa-sync-alt"></i>
 					<span>商品登録</span>
 				</a>
 			</li>

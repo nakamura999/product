@@ -11,14 +11,16 @@
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
 				<div class="container-fluid">
-					<div class="card shadow my-4">
+					<div class="card shadow text-white bg-info border-dark my-4">
 						<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary">商品一覧</h6>
+							<h6 class="m-0 font-weight-bold text-success">
+								<i class="fas fa-align-justify"></i> 商品一覧
+							</h6>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
 								<div th:if="${products.size() == 0}">
-									まだ登録がありません
+									商品を登録してください
 								</div>
 								<table class="table table-bordered" th:if="${products.size() > 0}">
 									<thead>
