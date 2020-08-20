@@ -15,6 +15,10 @@
 - Thymeleaf
 - Spring Web
 
+http://localhost:8080/
+ターミナル: ./mvnw spring-boot:run
+
 ![main](img/product1.png)
+==============================
 ![main2](img/product2.png)
 

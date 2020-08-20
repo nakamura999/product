@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Range;
+//import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -32,6 +33,9 @@ public class Product {
 	public String setPriceEn() {
 		return price + "円";
 	}
+	
+//	private MultipartFile image;
+//	private byte[] image;
 
 	@ManyToOne
 	private Genre genre;
